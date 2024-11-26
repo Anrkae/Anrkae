@@ -1,0 +1,17 @@
+{% if product.selected_or_first_available_variant %}
+  {% assign variant = product.selected_or_first_available_variant %}
+  
+  <!-- Verificar se a variante tem as propriedades específicas -->
+  {% if variant.id == 'ID_DA_VARIANTE_DESEJADA' %}
+    <!-- Mostrar os campos adicionais (line_item_property_PiCV6F e line_item_property_HqYnxA) -->
+    <div class="line-item-property">
+      <label for="PiCV6F">Nome</label>
+      <input type="text" id="PiCV6F" name="properties[Nome]" />
+    </div>
+
+    <div class="line-item-property">
+      <label for="HqYnxA">Número</label>
+      <input type="text" id="HqYnxA" name="properties[Número]" />
+    </div>
+  {% endif %}
+{% endif %}
